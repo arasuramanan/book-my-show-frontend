@@ -7,6 +7,7 @@ import {useNavigate, useParams} from 'react-router-dom'
 import {useFormik} from "formik";
 import * as yup from "yup"
 import AdminNavbar from './AdminNavbar';
+import bms from "../image/bms.png";
 
 const formValidationSchema = yup.object({
     name:yup.string().required(),
@@ -101,7 +102,7 @@ const formValidationSchema = yup.object({
           width: { xs: '120px', md: '120px' },
         }}
         alt="The house from the offer."
-        src="/image/bms.png"
+        src={bms}
         />
         <h4>Edit Movie</h4>
 

@@ -7,6 +7,8 @@ import {useNavigate} from 'react-router-dom'
 import {useFormik} from "formik";
 import * as yup from "yup"
 import AdminNavbar from './AdminNavbar';
+import bms from "../image/bms.png";
+
 
 const formValidationSchema = yup.object({
     name:yup.string().required(),
@@ -18,9 +20,7 @@ const formValidationSchema = yup.object({
     cast:yup.string().required(),
     cast1:yup.string().required(),
     cast2:yup.string().required(),
-    castimg:yup.string().required(),
-    castimg1:yup.string().required(),
-    castimg2:yup.string().required(),
+    
   })
   
   function AdminaddMovies() {
@@ -37,9 +37,7 @@ const formValidationSchema = yup.object({
             cast:'',
             cast1:'',
             cast2:'',
-            castimg:'',
-            castimg1:'',
-            castimg2:'',
+        
         },
         validationSchema : formValidationSchema,
         onSubmit:(newList) => {
@@ -61,7 +59,7 @@ const formValidationSchema = yup.object({
             })
                 .then((data) => data.json())
                 .then((dat) => console.log(dat))
-                .then((data) => alert('Movie added Successfully'))
+                .then((data) => alert('Movies added Successfully 😀😀😀😀'))
                 .then(() => navigate('/bookmyshow/movies/admin'))
       }
   
@@ -78,7 +76,7 @@ const formValidationSchema = yup.object({
             width: { xs: '120px', md: '120px' },
           }}
           alt="The house from the offer."
-          src="/images\bookmyshow.png"
+          src={bms}
           />
           <h4>Add New Movie</h4>
   
@@ -203,45 +201,7 @@ const formValidationSchema = yup.object({
              />
 
 
-          <TextField
-           id="outlined-basic"
-            label="Actors image"
-             variant="outlined"
-             name="castimg"
-             value={values.castimg}
-             onBlur={handleBlur}
-             onChange={handleChange}
-             type="text"
-             error = {touched.castimg && errors.castimg}
-              helperText =  {touched.castimg && errors.castimg ? errors.castimg :null}
-              />
-             
-          <TextField
-           id="outlined-basic"
-            label="Actors image"
-             variant="outlined"
-             name="castimg1"
-             value={values.castimg1}
-             onBlur={handleBlur}
-             onChange={handleChange}
-             type="text"
-             error = {touched.castimg1 && errors.castimg1}
-              helperText =  {touched.castimg1 && errors.castimg1 ? errors.castimg1 :null}
-              />
-
-<TextField
-           id="outlined-basic"
-            label="Actors image"
-             variant="outlined"
-             name="castimg2"
-             value={values.castimg2}
-             onBlur={handleBlur}
-             onChange={handleChange}
-             type="text"
-             error = {touched.castimg2 && errors.castimg2}
-              helperText =  {touched.castimg2 && errors.castimg2 ? errors.castimg2 :null}
-              />
-  
+          
           <Button type="submit" sx={{backgroundColor:"#f84464",padding:"15px"}} variant="contained">Add</Button>
           </Box>
           </form>

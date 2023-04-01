@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import NavBar from './NavBar';
+import bms from "../image/bms.png";
 
 
 const formValidationSchema = yup.object({
@@ -18,7 +19,7 @@ const formValidationSchema = yup.object({
 
 function Query() {
 
-  const token = localStorage.getItem("Authorization")
+  // const token = localStorage.getItem("Authorization")
   const {handleSubmit, values, handleChange,handleBlur,touched, errors} = useFormik({
     initialValues:{
       email:'',
@@ -71,7 +72,7 @@ function Query() {
           width: { xs: '120px', md: '120px' },
         }}
         alt="The house from the offer."
-        src="/image/bms.png"
+        src={bms}
         />
         <h4>Add Your Query to Our Admin</h4>
 

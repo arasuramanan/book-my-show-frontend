@@ -13,9 +13,9 @@ function Movie() {
 
 const { id } = useParams()
 let [movie,setMovie] = useState({})
-let navigate = useNavigate()
+// let navigate = useNavigate()
 
-const token = localStorage.getItem("Authorization")
+// const token = localStorage.getItem("Authorization")
 
 const getMovie = () => {
 fetch(`http://localhost:5002/bookmyshow/movies/${id}`,
@@ -27,8 +27,8 @@ fetch(`http://localhost:5002/bookmyshow/movies/${id}`,
       
   }
 })
-.then((data) => console.log(data))
-.then((list) => console.log(list))
+.then((data) => data.json())
+.then((list) => setMovie(list))
 
 }
 useEffect(() => {getMovie()},[id])
@@ -55,7 +55,7 @@ useEffect(() => {getMovie()},[id])
             <h1 style={{fontSize:"22px",color:"whitesmoke"}}>⭐ {movie.rating}</h1>
             <h4 style={{fontSize:"18px",color:"whitesmoke"}}>2D Tamil,Telugu</h4>
             <h1 style={{fontSize:"18px",color:"whitesmoke"}}>{movie.type}</h1>
-            <Button sx={{backgroundColor:"#f84464",marginTop:"10px"}} onClick={() => navigate(`/bookmyshow/movies/${movie._id}/theatre`)} variant="contained">Book Tickets</Button>
+            <Button sx={{backgroundColor:"#f84464",marginTop:"10px"}} onClick={() => {console.log(movie)}} variant="contained">Book Tickets</Button>
         </Box>
     </Box>
   </Box>

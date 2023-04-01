@@ -6,8 +6,9 @@ import {useParams, useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NavBar from './NavBar';
- import TextField from '@mui/material/TextField';
+// import TextField from '@mui/material/TextField';
 import jwt_decode from "jwt-decode";
+import bms from "../image/bms.png";
 
 
 
@@ -22,7 +23,7 @@ const { id,theaterId,showId,selected,total } = useParams()
 let [movie,setMovie] = useState({})
 let [show,setShow] = useState([])
 let [theater,setTheater] = useState([])
- let [email,setEmail] = useState("")
+//  let [email,setEmail] = useState("")
 
 
 
@@ -92,7 +93,7 @@ useEffect(() => {
           width: { xs: '120px', md: '120px' },
         }}
         alt="The house from the offer."
-        src="/image/bms.png"
+        src={bms}
         />
         <h4 style={{fontSize:"14px",lineHeight:"22px"}}>Make Your Payment here by Entering Your Mail Id for Share the ticket information which booked by You.</h4>
 

@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import bms from "../image/bms.png";
 
 
 function AdminNavbar() {
@@ -60,7 +61,7 @@ let navigate = useNavigate();
           width: { xs: '120px', md: '120px' },
         }}
         alt="The house from the offer."
-        src="/image/bms.png"
+        src={bms}
         />
           </Typography>
 

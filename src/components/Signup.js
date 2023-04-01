@@ -9,6 +9,7 @@ import * as yup from "yup"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NavBar from './NavBar';
+import bms from "../image/bms.png";
 
 
 const formValidationSchema = yup.object({
@@ -72,7 +73,7 @@ function Signup() {
           width: { xs: '120px', md: '120px' },
         }}
         alt="The house from the offer."
-        src="/image/bms.png"
+        src={bms}
         />
         <h4>Register Your Details</h4>
 

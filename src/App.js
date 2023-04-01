@@ -11,8 +11,8 @@ import Payment from './components/Payment';
 import Admin from './components/Admin';
 import AdminaddMovies from './components/AdminaddMovies';
 import AdmineditMovie from './components/AdmineditMovie';
-import SeatBooking from './components/SeatBooking';
-// import connect from './components/global/connect';
+
+
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
     <Route path='/bookmyshow/movies/:id' element={<Movie/>}/>
     <Route path='/bookmyshow/movies/:id/theater' element={<Theater/>}/>
     <Route path='/bookmyshow/movies/:id/theater/:theaterId' element={<Bookings/>}/>
-    <Route path='/bookmyshow/movies/:id/theater/:theaterId/:showId/seatbooking' element={<SeatBooking/>}/>
+    
     <Route path='/bookmyshow/movies/:id/theater/:theaterId/:showId/seatbooking/:selected/:total' element={<Payment/>}/>
   </Routes>
   
