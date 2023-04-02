@@ -32,7 +32,7 @@ function Query() {
 
 })
   let addUser = (queryList) => {
-        fetch("http://localhost:5002/bookmyshow/movies/queries",{
+        fetch("https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies/queries",{
           method:"POST",
           body: JSON.stringify(queryList),
           headers: {

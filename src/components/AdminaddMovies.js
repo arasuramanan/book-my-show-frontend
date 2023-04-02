@@ -46,7 +46,7 @@ const formValidationSchema = yup.object({
     
     })
       let addMovie = (newList) => {
-            fetch("http://localhost:5002/bookmyshow/add/movies",{
+            fetch("https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/add/movies",{
               method:"POST",
               body: JSON.stringify(newList),
               headers: {

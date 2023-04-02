@@ -28,7 +28,7 @@ let [theater,setTheater] = useState([])
 
 
 const getMovie = () => {
-fetch(`http://localhost:5002/bookmyshow/movies/${id}`,
+fetch(`https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies/${id}`,
 {
     method:"GET",
     headers:{
@@ -56,7 +56,7 @@ useEffect(() => {
     const bookingUser = {
         email:decoded.email,
       }
-    fetch(`http://localhost:5002/bookmyshow/movies/${id}`,{
+    fetch(`https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies/${id}`,{
       method:"POST",
       body: JSON.stringify(bookingUser),
       headers: {

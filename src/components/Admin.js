@@ -12,7 +12,7 @@ function Admin() {
     const token = localStorage.getItem("Authorization")
     const [movies,setMovies] = useState([])
     const getMovies = () => {
-    fetch("http://localhost:5002/bookmyshow/movies",
+    fetch("https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies",
     {
         method:"GET",
      headers:{
@@ -29,7 +29,7 @@ function Admin() {
 
     const deleteList = (id) => {
         console.log("deleting", id)
-        fetch(`http://localhost:5002/bookmyshow/movies/${id}`,{
+        fetch(`https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies/${id}`,{
         method:"DELETE",
           headers:{
             Authorization:localStorage.getItem("Authorization")

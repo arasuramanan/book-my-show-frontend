@@ -9,7 +9,7 @@ function Movies() {
   const token = localStorage.getItem("Authorization")
     const [movies,setMovies] = useState([])
     const getMovies = () => {
-    fetch("http://localhost:5002/bookmyshow/movies",
+    fetch("https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies",
     {
         method:"GET",
         headers:{

@@ -9,7 +9,7 @@ function AppContext({children}) {
     useEffect(() => {
         let email = localStorage.getItem("email")
         if(email){
-          fetch(`http://localhost:5002/users/getDetails/${email}`,{
+          fetch(`https://book-my-show-backend-arasuramanan.onrender.com/users/getDetails/${email}`,{
             method: "GET",
             headers:{
               Authorization:localStorage.getItem("Authorization")

@@ -13,7 +13,7 @@ let [theater,setTheater] = useState([])
 const token = localStorage.getItem("Authorization")
 
 const getMovie = () => {
-    fetch(`http://localhost:5002/bookmyshow/movies/${id}`,
+    fetch(`https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies/${id}`,
     {
         method:"GET",
         headers:{
@@ -27,7 +27,7 @@ const getMovie = () => {
     useEffect(() => {getMovie()},[id])
 
     const getTheater = () => {
-        fetch(`http://localhost:5002/bookmyshow/movies/${id}`,
+        fetch(`https://book-my-show-backend-arasuramanan.onrender.com/bookmyshow/movies/${id}`,
         {
             method:"GET",
             headers:{

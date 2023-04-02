@@ -36,7 +36,7 @@ function Signup() {
   
   })
     let addUser = (newList) => {
-          fetch("http://localhost:5002/users/signup",{
+          fetch("https://book-my-show-backend-arasuramanan.onrender.com/users/signup",{
             method:"POST",
             body: JSON.stringify(newList),
             headers: {
