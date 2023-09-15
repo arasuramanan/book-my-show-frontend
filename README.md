@@ -1,4 +1,4 @@
-🚀 [Live preview](https://radiant-figolla-a4542f.netlify.app/users/login) 
+🚀 [Live preview](https://radiant-figolla-a4542f.netlify.app/) 
 # Screenshot:
 ![bms1](https://github.com/arasuramanan/book-my-show-frontend/assets/102941390/e89d38a4-d0f8-4369-9688-336e6d888d31)
 
